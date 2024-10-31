@@ -1,0 +1,134 @@
+/*Normalizar codigo*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*background general*/
+.footer{
+  background-color: var(--shallowocean);
+  padding: 1rem 5rem 0rem 5rem;
+  font-family: poppins;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer:nth-last-child(n){
+  padding: 0rem;
+}
+
+.footer-brand{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #0f1035;
+  margin-bottom: 50px;
+}
+
+/*logo Caribdis*/
+.logo-footer img{
+  width: 10rem;
+  height: 10rem;
+}
+/*Spcial handlers*/
+.social-list{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 30px;
+
+}
+
+.social-list > li {
+  margin: 30px;
+}
+
+.socialh {
+  color:  #0f1035;
+}
+.socialh:hover{
+  color: hsl(5, 100%, 69%);
+}
+
+/*Link Box*/
+
+.footer-link-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.br{
+  content: "";
+    display: block;
+    background: var(--bittersweet);
+    width: 50px;
+    height: 2px;
+    margin-top: 10px;
+}
+
+.footerh3{
+  font-size: 1.5rem;
+}
+
+.infobox {
+  padding: 20px;
+}
+.infocontent {
+  padding: 10px;
+}
+.infocontent > a {
+  text-decoration: none;
+  padding-left: 5px;
+  outline: none;
+  color: #0f1035;
+}
+
+.infocontent > a:hover{
+  color:var(--bittersweet);
+}
+.newsletter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  
+}
+
+.newsletter-input{
+  background: var(--white);
+  color: var(--onyx);
+  padding: 15px 25px;
+  padding-right: 50x;
+  border: none;
+  font-size: var(--fs-9);
+}
+
+.btn {
+  background: var(--background, var(--bittersweet));
+  color: var(--color, var(--white));
+  font-size: var(--fs-9)!important;
+  display: flex;
+  justify-items: center;
+  padding: 15px!important;
+   }
+.footer-bottom{
+  background: var(--deepocean);
+  padding-block: 20px;
+  width: 100%;
+}
+  
+.copyright {
+  text-align: center;
+  color: var(--white);
+}
+
+.copyright  >a { 
+  color: var(--bittersweet);
+  text-decoration: none;
+
+}

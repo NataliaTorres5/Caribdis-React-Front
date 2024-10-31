@@ -1,0 +1,81 @@
+
+.fondo-formulario{
+  background-image: url(https://i.im.ge/2024/09/08/fWNXpz.fondomar.png);
+}
+
+.overlay{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form-sign{
+  display: flex;
+  flex-direction: column;
+}
+.input-box{
+  padding: 0.7rem 3rem 0.7rem 3rem;
+  margin: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-family: poppins;
+}
+
+.box {
+    background-color: #ffffffc9;
+    border-radius: var(--button-radius);
+    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+      0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+    height: 500px;
+    max-width: var(--max-width);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .cointainer-signin{
+    height: 80vh;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link-recov{
+    text-decoration: none;
+    padding: 1rem;
+  }
+
+  .btn-sign{
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #365486;
+    color: rgb(255, 255, 255);
+    font-family: poppins;
+  }
+
+  .btn-sign:hover{
+
+  background-color: #a2bae4;
+    
+  }
+
+  .btn-regist {
+    background-color: var(--bittersweet);
+    padding: 7px;
+    border: none;
+    color: var(--white);
+    border-radius: 8px;
+    font-family: poppins;
+    cursor: pointer;
+
+  }
+
+  .btn-regist:hover{
+    background-color: var(--salmon);
+  }
