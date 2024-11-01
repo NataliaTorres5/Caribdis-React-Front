@@ -14,9 +14,29 @@ import ProductPage from "./pages/ProductPages"
 import TicketPage from "./pages/TicketPage"
 import './App.css'
 
+import authQueries from "./services/autheQueries";
+import userActions from "./store/actions/userActions";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+
 function App() {
  
+  const dispatch = useDispatch();
 
+  const token = localStorage.getItem("token");
+  
+    useEffect(() => {
+      
+      if (token) {
+        authQueries.signInUserWithToken(token).then((res) => {
+          console.log(res)
+          if (res.token) {
+            dispatch(userActions.login(res));
+          }
+        });
+      }
+    }, [token, dispatch]);
+  
   return (
     <>
      <BrowserRouter>
