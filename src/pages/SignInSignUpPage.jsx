@@ -21,7 +21,7 @@ export default function SignInSignUpPage() {
           <button className="btn-sign " onClick={toggleOverlay}>
             {isForm ? "Registro" : "Ingresa"}
           </button>
-          {isActive ? <SignIng /> : <LogIn />}
+          {isActive ? <LogIn />  : <SignIng />}
         </div>
       </div>
     </div>
