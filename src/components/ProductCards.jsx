@@ -89,37 +89,37 @@ const itemView = (item) => {
 
     return(
 
-        <> <div class="shell">
-        <div class="container-products">
-          <div class="row-products">
-            <div class="col-md-3 card-producr">
-              <div class="wsk-cp-product">
-                <div class="wsk-cp-img">
+        <> <div className="shell">
+        <div className="container-products">
+          <div className="row-products">
+            <div className="col-md-3 card-producr">
+              <div className="wsk-cp-product">
+                <div className="wsk-cp-img">
                   <img
                     src={imgu}
                     alt={item.titleProduct}
-                    class="img-responsive"
+                    className="img-responsive"
                   />
                 </div>
-                <div class="wsk-cp-text">
-                  <div class="category">
+                <div className="wsk-cp-text">
+                  <div className="category">
                     <span> {item.category} </span>
                   </div>
-                  <div class="title-product">
+                  <div className="title-product">
                     <h3>{item.titleProduct}</h3>
                   </div>
-                  <div class="description-prod">
+                  <div className="description-prod">
                     <p>
                      {item.description}
                     </p>
                   </div>
-                  <div class="card-footer">
-                    <div class="wcf-left">
-                      <span class="price">{item.price}</span>
+                  <div className="card-footer">
+                    <div className="wcf-left">
+                      <span className="price">{item.price}</span>
                     </div>
-                    <div class="wcf-right">
-                      <LinkRouter to={item.link} class="buy-btn">
-                        <i class="zmdi zmdi-shopping-basket"></i>
+                    <div className="wcf-right">
+                      <LinkRouter to={item.link} className="buy-btn">
+                        <i className="zmdi zmdi-shopping-basket"></i>
                       </LinkRouter>
                     </div>
                   </div>
