@@ -2,6 +2,10 @@ import axios from "axios";
 
 const animalQueries = {
 
+  
+    /*http://caribdis-back.onrender.com/api/animal*/ //externo
+    /*http://localhost:4000/api/animal/*/
+
     async getAllAnimals() {
         try {
             const response= await axios("http://caribdis-back.onrender.com/api/animal");
@@ -78,3 +82,4 @@ const animalQueries = {
 },
 
 }
+export default animalQueries
