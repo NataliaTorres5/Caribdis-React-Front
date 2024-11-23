@@ -8,7 +8,7 @@ const animalQueries = {
 
     async getAllAnimals() {
         try {
-            const response= await axios("http://caribdis-back.onrender.com/api/animal");
+            const response= await axios("https://caribdis-back.onrender.com/api/animal");
             console.log(response)
             return response.data.response
         } catch (error) {
@@ -19,7 +19,7 @@ const animalQueries = {
 
     async getOneById(id){
         try {
-            const response = await axios(`http://caribdis-back.onrender.com/api/animal/${id}`);
+            const response = await axios(`https://caribdis-back.onrender.com/api/animal/${id}`);
             return response.data.response
         } catch (error) {
             console.log(error);
@@ -31,7 +31,7 @@ const animalQueries = {
     async createOneAnimal(token, data){
         console.log(data, "query create one animal")
         try{
-            const response = await axios.post(`http://caribdis-back.onrender.com/api/animal`, data, {
+            const response = await axios.post(`https://caribdis-back.onrender.com/api/animal`, data, {
                 headers:{
                     "Authorization": "Bearer " + token,
                     "Content-Type": "application/json"
@@ -47,8 +47,9 @@ const animalQueries = {
     },
 
     async deleteOneAnimal(token, id) {
+        console.log(id)
         try{
-            const response = await axios.delete(`http://caribdis-back.onrender.com/api/animal/${id}`, {}, {
+            const response = await axios.delete(`https://caribdis-back.onrender.com/api/animal/${id._id}`, {}, {
                 headers:{
                     "Authorization": "Bearer " + token,
                     "Content-Type": "application/json"
@@ -63,8 +64,9 @@ const animalQueries = {
 
     },
     async updateOneAnimal( token, id, data){
+        console.log(id)
         try {
-            const response = await axios.put(`http://caribdis-back.onrender.com/api/animal/${id}`, data,  {
+            const response = await axios.put(`http://localhost:4000/api/animal/${id}`, data,  {
                 headers:{
                     "Authorization": "Bearer " + token,
                     "Content-Type": "application/json"

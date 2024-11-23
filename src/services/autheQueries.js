@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiAuth = axios.create(
     {
-        baseURL: 'http://caribdis-back.onrender.com/api/user'
+        baseURL: 'https://caribdis-back.onrender.com/api/user'
     }
 )
 
@@ -27,7 +27,7 @@ const authQueries  = {
     async signInUserWithToken(token) {
         console.log(token)
         try {
-          const response = await axios.post("http://caribdis-back.onrender.com/api/user/token",{}, {
+          const response = await axios.post("https://caribdis-back.onrender.com/api/user/token",{}, {
       
             headers: {
               "Authorization": "Bearer " + token,
@@ -43,7 +43,7 @@ const authQueries  = {
 
     async registroUsuario(data) {
         try {
-        const response = await axios("http://caribdis-back.onrender.com/api/user/signup", {
+        const response = await axios("https://caribdis-back.onrender.com/api/user/signup", {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const authQueries  = {
     },
     async getUserById(id){ 
         try{
-          const response = await axios(`http://caribdis-back.onrender.com/api/user/${id} ` )
+          const response = await axios(`https://caribdis-back.onrender.com/api/user/${id} ` )
         } catch(error){
           console.log(error, "hay error")
           

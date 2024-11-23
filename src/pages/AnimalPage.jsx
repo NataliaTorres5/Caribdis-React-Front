@@ -1,16 +1,70 @@
 import{useEffect, useState, React} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import AnimalCard from "../components/AnimalCard";
+import AnimalCard from "../components/Animal/AnimalCard";
 import animalQueries from "../services/animalQueries";
+import CreateAnimal from "../components/Animal/CreateAnimal";
+import "../styles/Animals/AnimalCard.css"
 
 
 function AnimalPage() {
-  const [animalInfo, setAnimalInfo] =useState([])
-  const params = useParams();
+
+  const user = useSelector((store) => store.user.userData);
+  const role = user?.role 
+
+  const [animals, setAnimals] =useState([])
+
+  
+  useEffect(() => {
+    animalQueries.getAllAnimals().then((data) =>{
+      setAnimals(data)
+  })
+  }, []);
+
+  
+  
+  return (
+    <>
+
+    <div className="pag-Animals-full">
+    
+       <div className="banner-animals">
+      
+        <h2>Animales</h2>
+        <p>Quieres saber sobre los animales que tenemos en el acuario?</p>
+        <p>Conocelos!</p>
+
+        
+      </div>
+
+     
+      <div className="createAnimals-button">
+      {role === "admin" ? (   <CreateAnimal/>) :  null }
+   
+      </div>
+
+      <div className="filter"></div>
+    <div className="container-animals">
+        {animals?.length > 0 && ( // Use && for conditional rendering
+          animals.map((animal) => ( // Use a descriptive variable for each animal
+            <AnimalCard key={animal.id} {...animal} />
+          ))
+        )}
+      </div>
+      </div>
+
+    </>
+  );
+}
+ 
+export default AnimalPage;
+
+/*
+
+const params = useParams();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user.userData);
-  const userID = user.id
+  const userID = user?.id
   let token = localStorage.getItem("token");
   const [openTab, setOpenTab]= useState(false);
   const handleClick = () => setOpenTab(!openTab);
@@ -60,18 +114,4 @@ function AnimalPage() {
 useEffect(() => {
   animalQueries.getOneById(params.id).then(setNewAnimal)
 }, [params.id])
-  return (
-    <>
-    <div>
-        {animalInfo.length > 0 && ( // Use && for conditional rendering
-          animalInfo.map((animal) => ( // Use a descriptive variable for each animal
-            <AnimalCard key={animal.id} {...animal} />
-          ))
-        )}
-      </div>
-
-    </>
-  );
-}
- 
-export default AnimalPage;
+*/ 

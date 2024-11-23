@@ -1,0 +1,69 @@
+/*Pagina principal*/
+
+.container-animals{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 50px;
+    
+    }
+
+.banner-animals{
+    padding: 5px 25px;
+    background-color: var(--oceanblue);
+    height: 95px;
+    color: white
+}
+
+.banner-animals  p{
+    padding: 2px;
+}
+
+.createAnimals-button{
+    margin: 25px;
+}
+
+.createAnimals-button p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+/*Cards de animales*/
+
+.card-a {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    justify-content: center;
+    align-items: center;
+
+    width: 28%;
+    min-height: 35rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+}
+
+.img-a img{
+    width: 30rem;
+    height: 18rem;
+    padding: 0px 45px;
+    
+}
+.lowerCard-animal{
+    width: 100%;
+    padding: 2rem;
+    border-top: 2px solid gray;
+}
+
+/*Create Animal button*/
+
+.createButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    
+}
